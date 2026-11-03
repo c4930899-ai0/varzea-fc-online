@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: varzea-fc-salas-online
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python servidor_online.py --host 0.0.0.0
+    healthCheckPath: /health
